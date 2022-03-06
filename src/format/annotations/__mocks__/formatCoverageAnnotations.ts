@@ -1,1 +1,1 @@
-export const formatCoverageAnnotations = jest.fn();
+export const formatCoverageAnnotations = jest.fn()

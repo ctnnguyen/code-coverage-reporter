@@ -1,1 +1,1 @@
-export const getCoverage = jest.fn();
+export const getCoverage = jest.fn()

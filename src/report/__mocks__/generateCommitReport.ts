@@ -1,1 +1,1 @@
-export const generateCommitReport = jest.fn();
+export const generateCommitReport = jest.fn()

@@ -1,1 +1,1 @@
-export const switchBranch = jest.fn();
+export const switchBranch = jest.fn()

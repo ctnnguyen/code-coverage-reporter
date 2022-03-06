@@ -1,1 +1,1 @@
-export const removeDirectory = jest.fn().mockName('removeDirectory');
+export const removeDirectory = jest.fn().mockName('removeDirectory')

@@ -1,1 +1,1 @@
-export const createReport = jest.fn();
+export const createReport = jest.fn()
