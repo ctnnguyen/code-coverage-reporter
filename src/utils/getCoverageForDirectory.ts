@@ -1,13 +1,13 @@
-import micromatch from 'micromatch';
+import micromatch from 'micromatch'
 
-import { accumulateCoverageDetails } from './accumulateCoverageDetails';
-import { DetailedFileCoverage, FileCoverageMap } from './getFileCoverageMap';
+import { accumulateCoverageDetails } from './accumulateCoverageDetails'
+import { DetailedFileCoverage, FileCoverageMap } from './getFileCoverageMap'
 
 export const getCoverageForDirectory = (
-    directory: string,
-    details: FileCoverageMap
+  directory: string,
+  details: FileCoverageMap
 ): DetailedFileCoverage => {
-    const children = micromatch(Object.keys(details), `${directory}/**`);
+  const children = micromatch(Object.keys(details), `${directory}/**`)
 
-    return accumulateCoverageDetails(children.map((child) => details[child]));
-};
+  return accumulateCoverageDetails(children.map((child) => details[child]))
+}

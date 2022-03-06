@@ -1,25 +1,25 @@
-import isNil from 'lodash/isNil';
+import isNil from 'lodash/isNil'
 
-import { tryGetJestThreshold } from './tryGetJestThreshold';
-import { JestThreshold } from '../typings/JestThreshold';
+import { tryGetJestThreshold } from './tryGetJestThreshold'
+import { JestThreshold } from '../typings/JestThreshold'
 
 export const getNormalThreshold = async (
-    workingDirectory: string,
-    thresholdFromOptions: number | undefined
+  workingDirectory: string,
+  thresholdFromOptions: number | undefined
 ): Promise<JestThreshold> => {
-    const threshold = await tryGetJestThreshold(workingDirectory);
+  const threshold = await tryGetJestThreshold(workingDirectory)
 
-    // Should be removed in further versions
-    if (isNil(threshold)) {
-        return {
-            global: {
-                branches: thresholdFromOptions,
-                functions: thresholdFromOptions,
-                lines: thresholdFromOptions,
-                statements: thresholdFromOptions,
-            },
-        };
+  // Should be removed in further versions
+  if (isNil(threshold)) {
+    return {
+      global: {
+        branches: thresholdFromOptions,
+        functions: thresholdFromOptions,
+        lines: thresholdFromOptions,
+        statements: thresholdFromOptions,
+      },
     }
+  }
 
-    return threshold;
-};
+  return threshold
+}

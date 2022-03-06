@@ -1,3 +1,3 @@
-const realPath = jest.requireActual('path');
+const realPath = jest.requireActual('path')
 
-export const relative = jest.fn(realPath.relative);
+export const relative = jest.fn(realPath.relative)

@@ -1,13 +1,13 @@
-import { context, getOctokit } from '@actions/github';
+import { context, getOctokit } from '@actions/github'
 
 export const generateCommitReport = async (
-    report: string,
-    repo: { owner: string; repo: string },
-    octokit: ReturnType<typeof getOctokit>
+  report: string,
+  repo: { owner: string; repo: string },
+  octokit: ReturnType<typeof getOctokit>
 ) => {
-    await octokit.repos.createCommitComment({
-        ...repo,
-        commit_sha: context.sha,
-        body: report,
-    });
-};
+  await octokit.repos.createCommitComment({
+    ...repo,
+    commit_sha: context.sha,
+    body: report,
+  })
+}

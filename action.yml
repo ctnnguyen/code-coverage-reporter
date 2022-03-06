@@ -37,13 +37,16 @@ inputs:
     default: 'none'
   custom-title:
     required: false
-    description: 'Sets the title of the coverage report comment in Github.'
+    description: 'Sets the title of the coverage report comment in Github'
+  packages:
+    required: false
+    description: 'Comma-separated list of paths to packages within monorepo'
   coverage-file:
     required: false
-    description: Path to file the a previously generated report.json file. (bypasses running the test again)
+    description: 'Path to file the a previously generated report.json file. (bypasses running the test again)'
   base-coverage-file:
     required: false
-    description: Path to the report.json file to compare against. This should be from the branch the PR is merging into.
+    description: 'Path to the report.json file to compare against. This should be from the branch the PR is merging into.'
 runs:
   using: 'node16'
   main: 'dist/index.js'

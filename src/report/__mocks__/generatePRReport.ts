@@ -1,1 +1,1 @@
-export const generatePRReport = jest.fn();
+export const generatePRReport = jest.fn()

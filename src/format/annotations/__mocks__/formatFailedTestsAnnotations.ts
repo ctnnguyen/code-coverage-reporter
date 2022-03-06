@@ -1,1 +1,1 @@
-export const formatFailedTestsAnnotations = jest.fn();
+export const formatFailedTestsAnnotations = jest.fn()
